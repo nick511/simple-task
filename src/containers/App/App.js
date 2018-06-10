@@ -1,11 +1,11 @@
 import React, { Component } from 'react'
 import { Route, Switch } from 'react-router-dom'
 
+import './app.css' // load css before loading other components
 import Header from '../../components/Header'
 import Footer from '../../components/Footer'
 import Home from '../Home/Home'
 import About from '../About/About'
-import './app.css'
 
 const Content = () => {
   return (
