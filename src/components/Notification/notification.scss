@@ -1,0 +1,19 @@
+/* import custom variables */
+@import "../../variables.scss";
+
+/* based on Bulma: notification */
+@import "node_modules/bulma/sass/utilities/_all";
+@import "node_modules/bulma/sass/elements/notification";
+
+
+.notification {
+  padding: 15px 20px;
+
+  .title {
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+  p {
+    font-size: 14px;
+  }
+}

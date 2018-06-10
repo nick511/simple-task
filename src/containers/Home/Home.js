@@ -1,5 +1,6 @@
 import React from 'react'
 
+import Notification, { TYPE_INFO, TYPE_SUCCESS } from '../../components/Notification'
 import './home.css'
 
 const Home = () => {
@@ -7,15 +8,8 @@ const Home = () => {
     <div className='home'>
       <h1>Your tasks</h1>
 
-      <section className='notification is-info'>
-        <div className='title'>All tasks completed</div>
-        <p>Well done!</p>
-      </section>
-
-      <section className='notification is-success'>
-        <h6>All tasks completed</h6>
-        <p>Well done!</p>
-      </section>
+      <Notification title='Complete all tasks' desc='You have 5 active tasks' type={TYPE_INFO} />
+      {/* <Notification title='All tasks completed' desc='Well done!' type={TYPE_SUCCESS} /> */}
 
       <section>
         <article>
