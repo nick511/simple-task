@@ -1,5 +1,20 @@
+/* import web fonts */
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,700');
+
+/* import custom variables */
+@import "variables.scss";
+
+/* import Bulma css framework */
+@import "node_modules/bulma/sass/utilities/_all";
+@import "node_modules/bulma/sass/base/_all";
+@import "node_modules/bulma/sass/layout/_all";
+@import "node_modules/bulma/sass/grid/columns";
+@import "node_modules/bulma/sass/elements/container";
+@import "node_modules/bulma/sass/elements/content";
+
+
 body {
-  margin: 0;
-  padding: 0;
-  font-family: sans-serif;
+  font-family: "Open Sans";
 }
+
+
