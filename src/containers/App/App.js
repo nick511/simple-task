@@ -1,10 +1,11 @@
 import React, { Component } from 'react'
 import { Route, Switch } from 'react-router-dom'
 
-import Header from '../../components/Header/Header'
+import Header from '../../components/Header'
+import Footer from '../../components/Footer'
 import Home from '../Home/Home'
 import About from '../About/About'
-import './App.css'
+import './app.css'
 
 const Content = () => {
   return (
@@ -20,9 +21,10 @@ class App extends Component {
     return (
       <div className='App'>
         <Header />
-
-        <Content />
-
+        <main className='container content'>
+          <Content />
+        </main>
+        <Footer />
       </div>
     )
   }
