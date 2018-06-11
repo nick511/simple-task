@@ -13,6 +13,7 @@ class Header extends Component {
 
   render () {
     let menuClass = 'navbar-menu' + (this.state.showMenu ? ' is-active' : '')
+
     return (
       <nav className='navbar header'>
         <div className='navbar-brand'>

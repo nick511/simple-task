@@ -4,13 +4,6 @@ import './tasks.css'
 import Task from './Task'
 
 class Tasks extends Component {
-  state = {
-    tasks: [
-      { name: 'First Task', isCompleted: true },
-      { name: 'Second Task', isCompleted: false },
-    ],
-  }
-
   handleAddTask = (e) => {
     this.props.actions.addTask('')
   }

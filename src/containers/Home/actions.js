@@ -8,7 +8,6 @@ export const UPDATE_NAME_FULFILLED = 'UPDATE_NAME_FULFILLED'
 export const ADD_TASK = 'ADD_TASK'
 export const ADD_TASK_FULFILLED = 'ADD_TASK_FULFILLED'
 
-
 export const updateStatus = (id, isCompleted) => ({
   type: UPDATE_STATUS,
   payload: new Promise((resolve, reject) => {

@@ -19,17 +19,6 @@ const tasksReducer = (state = initialState, action) => {
         fetched: false,
         failed: false
       }
-    case actions.UPDATE_STATUS_FULFILLED:
-      const { id, isCompleted } = action.payload
-      const tasks = { ...state.tasks }
-      tasks[id].isCompleted = isCompleted
-      return {
-        ...state,
-        tasks,
-        fetching: false,
-        fetched: true,
-        failed: false
-      }
     case actions.UPDATE_STATUS_REJECTED:
       return {
         ...state,
@@ -37,11 +26,24 @@ const tasksReducer = (state = initialState, action) => {
         fetched: false,
         failed: true
       }
+    case actions.UPDATE_STATUS_FULFILLED:
+      const { id, isCompleted } = action.payload
+      const tasks = { ...state.tasks }
+      tasks[id].isCompleted = isCompleted
+
+      return {
+        ...state,
+        tasks,
+        fetching: false,
+        fetched: true,
+        failed: false
+      }
 
     case actions.UPDATE_NAME_FULFILLED: {
       const { id, name } = action.payload
       const tasks = { ...state.tasks }
       tasks[id].name = name
+
       return {
         ...state,
         tasks,
@@ -56,6 +58,7 @@ const tasksReducer = (state = initialState, action) => {
       const tasks = { ...state.tasks }
       let newId = Math.max(...Object.keys(tasks)) + 1
       tasks[newId] = { name, id: newId, isCompleted: false }
+
       return {
         ...state,
         tasks,

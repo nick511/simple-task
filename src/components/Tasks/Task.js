@@ -3,7 +3,7 @@ import PropTypes from 'prop-types'
 
 import './task.css'
 
-export default class Task extends Component {
+class Task extends Component {
   state = {
     showEdit: false,
     showEditName: false,
@@ -111,3 +111,5 @@ Task.propTypes = {
   isCompleted: PropTypes.bool,
   actions: PropTypes.objectOf(PropTypes.func),
 }
+
+export default Task

@@ -10,7 +10,6 @@ const Content = () => {
   return (
     <Switch>
       <Route exact path='/' component={Home} />
-      {/* <Route path='/xxx' component={xxx} /> */}
     </Switch>
   )
 }
@@ -20,9 +19,11 @@ class App extends Component {
     return (
       <div className='App'>
         <Header />
+
         <main className='container content'>
           <Content />
         </main>
+
         <Footer />
       </div>
     )

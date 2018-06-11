@@ -1,0 +1,31 @@
+# SimpleTask todo list
+Demo: http://moaning-voice.surge.sh/
+
+<img src=""  />
+
+
+---
+Install dependencies
+```sh
+yarn
+```
+
+Runs the app in development mode.
+Open http://localhost:3000 to view it in the browser.
+```sh
+yarn start
+```
+
+Builds the app for production to the build folder.
+```sh
+yarn build
+```
+
+
+---
+## Todo
+* Add task deletion
+* Add completion progress bars or charts
+* Add Step-by-step guide
+* Add testing
+* Add UI storybook
