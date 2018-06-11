@@ -1,10 +1,10 @@
 
 import { combineReducers } from 'redux'
 
-import zipCodesReducer from './reducers/zipCodes'
+import tasksReducer from '../containers/Home/reducer'
 
 const rootReducer = combineReducers({
-  zipCodes: zipCodesReducer
+  tasks: tasksReducer
 })
 
 export default rootReducer

@@ -5,13 +5,12 @@ import './app.css' // load css before loading other components
 import Header from '../../components/Header'
 import Footer from '../../components/Footer'
 import Home from '../Home/Home'
-import About from '../About/About'
 
 const Content = () => {
   return (
     <Switch>
       <Route exact path='/' component={Home} />
-      <Route path='/about' component={About} />
+      {/* <Route path='/xxx' component={xxx} /> */}
     </Switch>
   )
 }
