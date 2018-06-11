@@ -1,5 +1,5 @@
 # SimpleTask todo list
-Demo: http://moaning-voice.surge.sh/
+Demo: http://simple-task.surge.sh
 
 <img src="https://raw.githubusercontent.com/nick511/simple-task/master/screenshot.png"  />
 
