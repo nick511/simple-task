@@ -18,4 +18,19 @@ body {
   font-family: "Open Sans";
 }
 
+.content {
+  margin-top: 30px;
+  padding: 0 20px;
+
+  h1 {
+    font-weight: bold;
+    margin-bottom: 20px;
+  }
+
+  @include desktop {
+    margin-top: 60px;
+    padding: inherit;
+  }
+}
+
 

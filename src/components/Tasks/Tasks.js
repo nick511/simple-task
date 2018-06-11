@@ -20,12 +20,12 @@ class Tasks extends Component {
     return (
       <section className='columns is-multiline tasks'>
         { tasks.map((task) => (
-          <div className='column is-one-quarter-desktop' key={task.id}>
+          <div className='column is-one-third-tablet is-one-quarter-desktop' key={task.id}>
             <Task id={task.id} name={task.name} isCompleted={task.isCompleted} actions={actions} />
           </div>
         )) }
 
-        <div className='column is-one-quarter-desktop'>
+        <div className='column is-one-third-tablet is-one-quarter-desktop'>
           <div className='tasks--add-task' onClick={this.handleAddTask}>+ Add Task &nbsp;</div>
         </div>
       </section>
