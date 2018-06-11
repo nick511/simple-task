@@ -1,10 +1,9 @@
 # SimpleTask todo list
 Demo: http://moaning-voice.surge.sh/
 
-<img src=""  />
+<img src="https://raw.githubusercontent.com/nick511/simple-task/master/screenshot.png"  />
 
 
----
 Install dependencies
 ```sh
 yarn
