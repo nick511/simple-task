@@ -5,11 +5,15 @@ import './header.css'
 const Header = () => {
   return (
     <header className='header'>
-      <h1 className='header__title'>SimpleTask</h1>
+      <div className='navbar-menu'>
+        <div className='navbar-start'>
+          <h1 className='header__title'>SimpleTask</h1>
+        </div>
 
-      <nav className='header__nav'>
-        <a>Hello, User!</a>
-      </nav>
+        <div className='navbar-end'>
+          <span className='header__user'>Hello, User!</span>
+        </div>
+      </div>
     </header>
   )
 }

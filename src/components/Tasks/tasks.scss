@@ -7,13 +7,13 @@
     line-height: $task-height;
     font-weight: 600;
     text-align: center;
-    color: $gery;
+    color: $grey;
     cursor: pointer;
     border: 1px dashed #eee;
     border-radius: 3px;
 
     &:hover {
-      color: darken($gery, 30%);
+      color: darken($grey, 30%);
       background-color: #e9e9e9;
     }
   }

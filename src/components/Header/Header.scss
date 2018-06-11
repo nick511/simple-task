@@ -1,14 +1,25 @@
+/* import custom variables */
+@import "../../variables.scss";
+
+$height: 50px;
 
 .header {
   background-color: white;
-  height: 50px;
+  height: $height;
+  border-bottom: 1px solid #E5E5E5;
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.08);
+  line-height: $height;
 
   &__title {
-    font-size: 1.5em;
+    margin-left: 20px;
+    font-weight: 800;
+    font-size: 20px;
+    color: $mainColor;
   }
 
-  &__nav {
-
+  &__user {
+    margin-right: 20px;
+    color: #444444;
+    font-size: 14px;
   }
 }
