@@ -12,8 +12,7 @@ class Tasks extends Component {
   }
 
   handleAddTask = (e) => {
-    let task = { name: 'aa', isCompleted: false }
-    this.setState({ tasks: [...this.state.tasks, task] })
+    this.props.actions.addTask('')
   }
 
   render () {

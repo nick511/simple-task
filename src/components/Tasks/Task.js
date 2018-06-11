@@ -6,23 +6,57 @@ import './task.css'
 export default class Task extends Component {
   state = {
     showEdit: false,
-    showEditName: true,
+    showEditName: false,
+    nameValue: '',
   }
 
+  /* react */
+  componentDidMount = () => {
+    if (this.props.name === '') {
+      this.handleShowChangeName()
+    }
+  }
+
+  setTextInputRef = element => {
+    this.textInput = element
+  };
+
+  /* handle actions */
   handleShowEdit = (e) => {
     this.setState({ showEdit: true })
   }
 
   handleChangeStatus = (e) => {
-    e.stopPropagation()
     const { id, isCompleted, actions } = this.props
     actions.updateStatus(id, !isCompleted)
     this.setState({ showEdit: false })
   }
 
+  handleShowChangeName = (e) => {
+    this.setState({
+      showEditName: true,
+      showEdit: false,
+      nameValue: this.props.name,
+    }, () => { // after updated
+      if (this.textInput) {
+        this.textInput.focus()
+      }
+    })
+  }
+
+  handleChangeName = (e) => {
+    const { id, actions } = this.props
+    actions.updateName(id, this.state.nameValue)
+    this.setState({ showEditName: false })
+  }
+
+  handleInputChange = (e) => {
+    this.setState({ nameValue: e.target.value })
+  }
+
   render () {
     const { name, isCompleted = false } = this.props
-    const { showEdit, showEditName } = this.state
+    const { showEdit, showEditName, nameValue } = this.state
 
     let status = 'Active'
     let statusClass = 'task__status'
@@ -37,22 +71,34 @@ export default class Task extends Component {
     }
 
     return (
-      <div className='task' onClick={this.handleShowEdit}>
-        <div className='task__title'>{name}</div>
-        <div className={statusClass}>{status}</div>
+      <div className='task'>
+
+        <div className='task__main' onClick={this.handleShowEdit}>
+          <div className='task__title'>{name}</div>
+          <div className={statusClass}>{status}</div>
+        </div>
 
         { showEdit &&
-          <div className='task__edit'>
+          <div className='task__overlay task__edit'>
             <div>
               <a className={editStatusClass} onClick={this.handleChangeStatus}>{editStatus}</a>
             </div>
             <div>
-              <a className='task__edit__edit'>Edit</a>
+              <a className='task__edit__edit' onClick={this.handleShowChangeName}>Edit</a>
             </div>
           </div>
         }
 
-
+        { showEditName &&
+          <div className='task__overlay task__edit-name'>
+            <div>
+              <input type='text' placeholder='Enter task name...' ref={this.setTextInputRef} value={nameValue} onChange={this.handleInputChange} />
+            </div>
+            <div>
+              <a className='task__edit-name__save' onClick={this.handleChangeName}>Save</a>
+            </div>
+          </div>
+        }
 
       </div>
     )
