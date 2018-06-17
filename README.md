@@ -1,10 +1,9 @@
 # SimpleTask todo list
-Demo: http://moaning-voice.surge.sh/
+Demo: http://simple-task.surge.sh
 
-<img src=""  />
+<img src="https://raw.githubusercontent.com/nick511/simple-task/master/screenshot.png"  />
 
 
----
 Install dependencies
 ```sh
 yarn
@@ -24,6 +23,7 @@ yarn build
 
 ---
 ## Todo
+* Edit mode cancellation
 * Add task deletion
 * Add completion progress bars or charts
 * Add Step-by-step guide
