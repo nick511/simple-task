@@ -1,18 +1,4 @@
-/* import web fonts */
-@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,600,700,800');
-
-/* import custom variables */
-@import "variables.scss";
-
-/* import Bulma css framework */
-@import "node_modules/bulma/sass/utilities/_all";
-@import "node_modules/bulma/sass/base/_all";
-@import "node_modules/bulma/sass/layout/_all";
-@import "node_modules/bulma/sass/grid/columns";
-@import "node_modules/bulma/sass/elements/container";
-@import "node_modules/bulma/sass/elements/content";
-@import "node_modules/bulma/sass/components/navbar";
-
+@import "../../style/base.scss";
 
 body {
   font-family: "Open Sans";
