@@ -12,6 +12,7 @@ class Task extends Component {
 
   /* react */
   componentDidMount = () => {
+    // switch to change name mode after task added
     if (this.props.name === '') {
       this.handleShowChangeName()
     }
@@ -45,8 +46,12 @@ class Task extends Component {
   }
 
   handleChangeName = (e) => {
+    if (this.state.nameValue.trim() === '') {
+      return
+    }
+
     const { id, actions } = this.props
-    actions.updateName(id, this.state.nameValue)
+    actions.updateName(id, this.state.nameValue.trim())
     this.setState({ showEditName: false })
   }
 
