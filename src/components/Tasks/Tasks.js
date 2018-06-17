@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import PropTypes from 'prop-types'
 
 import './tasks.css'
 import Task from './Task'
@@ -19,11 +20,20 @@ class Tasks extends Component {
         )) }
 
         <div className='column is-one-third-tablet is-one-quarter-desktop'>
-          <div className='tasks--add-task' onClick={this.handleAddTask}>+ Add Task &nbsp;</div>
+          <div className='tasks__add-task' onClick={this.handleAddTask}>+ Add Task &nbsp;</div>
         </div>
       </section>
     )
   }
+}
+
+Tasks.propTypes = {
+  tasks: PropTypes.arrayOf(PropTypes.object).isRequired,
+  actions: PropTypes.shape({
+    addTask: PropTypes.func.isRequired,
+    updateStatus: PropTypes.func.isRequired,
+    updateName: PropTypes.func.isRequired,
+  }),
 }
 
 export default Tasks

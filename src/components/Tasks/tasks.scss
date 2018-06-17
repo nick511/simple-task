@@ -2,7 +2,7 @@
 @import "../../variables.scss";
 
 .tasks {
-  &--add-task {
+  &__add-task {
     height: $task-height;
     line-height: $task-height;
     font-weight: 600;

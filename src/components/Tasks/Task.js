@@ -109,7 +109,10 @@ Task.propTypes = {
   id: PropTypes.number.isRequired,
   name: PropTypes.string.isRequired,
   isCompleted: PropTypes.bool,
-  actions: PropTypes.objectOf(PropTypes.func),
+  actions: PropTypes.shape({
+    updateStatus: PropTypes.func.isRequired,
+    updateName: PropTypes.func.isRequired,
+  }),
 }
 
 export default Task

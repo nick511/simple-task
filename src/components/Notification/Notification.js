@@ -11,7 +11,7 @@ const Notification = ({ title, desc, type = TYPE_INFO }) => {
 
   return (
     <section className={sectionClass}>
-      <div className='title'>{ title }</div>
+      <div className='notification__title'>{ title }</div>
       <p>{ desc }</p>
     </section>
   )
