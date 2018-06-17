@@ -15,14 +15,25 @@ Open http://localhost:3000 to view it in the browser.
 yarn start
 ```
 
-Builds the app for production to the build folder.
+Build the app for production to the build folder.
 ```sh
 yarn build
 ```
 
 ---
 ## Check out storybook
-http://simpletask-storybook.surge.sh/
+Demo: http://simpletask-storybook.surge.sh/
+
+Update story files in /stories, then:
+
+Runs storybook
+```sh
+yarn run storybook
+```
+Build storybook
+```sh
+yarn run build-storybook
+```
 
 ---
 ## Todo
