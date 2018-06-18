@@ -38,7 +38,7 @@ yarn run build-storybook
 ---
 ## Todo
 * ~~Add UI storybook~~
-* Edit mode cancellation
+* ~~Edit mode cancellation~~
 * Add task deletion
 * Add completion progress bars or charts
 * Add Step-by-step guide

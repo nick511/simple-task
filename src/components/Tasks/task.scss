@@ -42,6 +42,12 @@
     background: rgba(26, 61, 82, 0.95);
     border-radius: $radius;
     line-height: $task-height;
+
+    .delete {
+      position: absolute;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
   }
 
   &__edit {

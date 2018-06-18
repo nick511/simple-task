@@ -55,8 +55,18 @@ class Task extends Component {
     this.setState({ showEditName: false })
   }
 
+  handleChangeNameKeyPress = (e) => {
+    if (e.key === 'Enter') {
+      this.handleChangeName(e)
+    }
+  }
+
   handleInputChange = (e) => {
     this.setState({ nameValue: e.target.value })
+  }
+
+  handleCancel = (e) => {
+    this.setState({ showEdit: false, showEditName: false })
   }
 
   render () {
@@ -84,24 +94,37 @@ class Task extends Component {
         </div>
 
         { showEdit &&
-          <div className='task__overlay task__edit'>
-            <div>
-              <a className={editStatusClass} onClick={this.handleChangeStatus}>{editStatus}</a>
+          <div className='task__overlay'>
+            <div className='task__edit'>
+              <div>
+                <a className={editStatusClass} onClick={this.handleChangeStatus}>{editStatus}</a>
+              </div>
+              <div>
+                <a className='task__edit__edit' onClick={this.handleShowChangeName}>Edit</a>
+              </div>
             </div>
-            <div>
-              <a className='task__edit__edit' onClick={this.handleShowChangeName}>Edit</a>
-            </div>
+            <button className='delete is-large' onClick={this.handleCancel}></button>
           </div>
         }
 
         { showEditName &&
-          <div className='task__overlay task__edit-name'>
-            <div>
-              <input type='text' placeholder='Enter task name...' ref={this.setTextInputRef} value={nameValue} onChange={this.handleInputChange} />
+          <div className='task__overlay'>
+            <div className='task__edit-name'>
+              <div>
+                <input
+                  type='text'
+                  placeholder='Enter task name...'
+                  ref={this.setTextInputRef}
+                  value={nameValue}
+                  onChange={this.handleInputChange}
+                  onKeyPress={this.handleChangeNameKeyPress}
+                />
+              </div>
+              <div>
+                <a className='task__edit-name__save' onClick={this.handleChangeName}>Save</a>
+              </div>
             </div>
-            <div>
-              <a className='task__edit-name__save' onClick={this.handleChangeName}>Save</a>
-            </div>
+            { name && <button className='delete is-large' onClick={this.handleCancel}></button>}
           </div>
         }
 
