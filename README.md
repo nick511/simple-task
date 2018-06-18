@@ -40,6 +40,6 @@ yarn run build-storybook
 * ~~Add UI storybook~~
 * ~~Edit mode cancellation~~
 * Add task deletion
-* Add completion progress bars or charts
+* ~~Add completion progress bars or charts~~
 * Add Step-by-step guide
 * Add testing

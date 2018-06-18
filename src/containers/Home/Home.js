@@ -4,25 +4,15 @@ import { connect } from 'react-redux'
 
 import * as actions from './actions'
 import './home.css' // load css before loading other components
-import Notification, { TYPE_INFO, TYPE_SUCCESS } from '../../components/Notification'
+import HomeNotification from '../../components/Notification/HomeNotification'
 import Tasks from '../../components/Tasks'
 
 const Home = ({ tasks, actions }) => {
-  let notiTittle = 'Complete all tasks'
-  let notiDesc = `You have ${tasks.filter(t => !t.isCompleted).length} active tasks`
-  let notiType = TYPE_INFO
-
-  if (tasks.every(t => t.isCompleted)) {
-    notiTittle = 'All tasks completed'
-    notiDesc = 'Well done!'
-    notiType = TYPE_SUCCESS
-  }
-
   return (
     <div className='home'>
       <h1>Your tasks</h1>
 
-      <Notification title={notiTittle} desc={notiDesc} type={notiType} />
+      <HomeNotification tasks={tasks} />
 
       <Tasks tasks={tasks} actions={actions} />
     </div>

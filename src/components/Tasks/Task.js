@@ -140,7 +140,7 @@ Task.propTypes = {
   actions: PropTypes.shape({
     updateStatus: PropTypes.func.isRequired,
     updateName: PropTypes.func.isRequired,
-  }),
+  }).isRequired,
 }
 
 export default Task

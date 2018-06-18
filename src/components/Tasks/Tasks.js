@@ -33,7 +33,7 @@ Tasks.propTypes = {
     addTask: PropTypes.func.isRequired,
     updateStatus: PropTypes.func.isRequired,
     updateName: PropTypes.func.isRequired,
-  }),
+  }).isRequired,
 }
 
 export default Tasks

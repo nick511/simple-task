@@ -17,4 +17,11 @@
   p {
     font-size: $text-desc-size;
   }
+
+  progress {
+    position: absolute;
+    width: 30%;
+    top: 25px;
+    right: 20px;
+  }
 }

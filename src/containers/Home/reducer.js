@@ -4,6 +4,7 @@ const initialState = {
   tasks: { // dummy data
     1: { id: 1, name: 'First Task', isCompleted: true },
     2: { id: 2, name: 'Second Task', isCompleted: false },
+    3: { id: 3, name: 'Third Task', isCompleted: false },
   },
   fetching: false,
   fetched: false,
