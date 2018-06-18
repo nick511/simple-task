@@ -13,6 +13,9 @@ storiesOf('Notification', module)
   .addWithJSX('Success type', () => (
     <Notification title='All tasks completed' desc='Well done!' type={TYPE_SUCCESS} />
   ))
+  .addWithJSX('With progressbar', () => (
+    <Notification title='Complete all tasks' desc='You have 3 active tasks' type={TYPE_INFO} progress={{max:7, value:3}} />
+  ))
 
 storiesOf('Tasks', module)
   .addWithJSX('Task list', () => {
