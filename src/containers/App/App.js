@@ -6,7 +6,7 @@ import Header from '../../components/Header'
 import Footer from '../../components/Footer'
 import Home from '../Home/Home'
 
-const Content = () => {
+export const Content = () => {
   return (
     <Switch>
       <Route exact path='/' component={Home} />

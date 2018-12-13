@@ -1,0 +1,23 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Task /> renders without crashing 1`] = `
+<div
+  className="task"
+>
+  <div
+    className="task__main"
+    onClick={[Function]}
+  >
+    <div
+      className="task__title"
+    >
+      test
+    </div>
+    <div
+      className="task__status"
+    >
+      Active
+    </div>
+  </div>
+</div>
+`;

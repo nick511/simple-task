@@ -1,0 +1,22 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<HomeNotification /> has 2 active tasks 1`] = `
+Object {
+  "desc": "You have 2 active tasks",
+  "progress": Object {
+    "max": 2,
+    "value": 0,
+  },
+  "title": "Complete all tasks",
+  "type": "is-info",
+}
+`;
+
+exports[`<HomeNotification /> has all tasks completed 1`] = `
+Object {
+  "desc": "Well done!",
+  "progress": null,
+  "title": "All tasks completed",
+  "type": "is-success",
+}
+`;
